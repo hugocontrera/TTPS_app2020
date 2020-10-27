@@ -1,1 +1,2 @@
-# TTPS_app2020
+# GestionCovid
+Proyecto para gestionar pacientes covid - TTPS 2020 - UNLP
