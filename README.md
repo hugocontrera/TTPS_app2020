@@ -8,7 +8,8 @@ El proyecto está creado con Net Core 2.2.0 (https://dotnet.microsoft.com/downlo
 Utiliza Entity Framework como ORM y persiste en una BBDD Sql Server.
 
 ## Iniciar el proyecto
-Para iniciar el proyecto es necesaria la instalacion de netcore y de sql. Una vez hecho esto, en la carpeta princial donde se encuentra el archivo "GestionCovid.sln", abrimos la consola y usamos el comando *dotnet run*.
+Para iniciar el proyecto es necesaria la instalacion de netcore y de sql. Una vez hecho esto, en la carpeta llamada GestionCovid donde se encuentra el archivo "GestionCovid.csproj", abrimos la consola y usamos el comando *dotnet run*.
+Cabe destacar que la primera vez que corramos el proyecto vamos a tener que usar anteriormente el comando *dotnet restore*
 
 El proyecto abrirá en tu navegador el url "https://localhost:44350/swagger".
 
