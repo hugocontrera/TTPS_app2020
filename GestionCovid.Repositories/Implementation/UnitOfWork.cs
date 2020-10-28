@@ -129,8 +129,8 @@ namespace GestionCovid.Repositories.Implementation
             //if (!_dbContext.Products.AnyAsync(x => x.Name == "café").Result)
             //    _dbContext.Products.Add(new Entities.Product { Name = "café", Description = "café", Stock = 50 });
 
-            //if (!_dbContext.InternalUsers.AnyAsync(x => x.Email == "admin").Result)
-            //    _dbContext.InternalUsers.Add(new Entities.InternalUser { Email = "admin", IsOrganization = false, Key = "admin", Password = "admin", Status = Entities.Enum.InternalUserStatus.Enabled, OrganizationInfo = null });
+            if (!_dbContext.InternalUsers.AnyAsync(x => x.Email == "admin").Result)
+                _dbContext.InternalUsers.Add(new Entities.InternalUser { Email = "admin", Key = "admin", Password = "admin", Status = Entities.Enum.InternalUserStatus.Enabled });
 
 
             Complete();
