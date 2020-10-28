@@ -4,14 +4,11 @@ using GestionCovid.DTOs.Request;
 using GestionCovid.Entities;
 using GestionCovid.Entities.Common;
 using GestionCovid.Entities.Enum;
+using GestionCovid.Infrastructure;
 using GestionCovid.Repositories;
-using LinqKit;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 
 
 namespace GestionCovid.Services.Implementation
@@ -21,12 +18,25 @@ namespace GestionCovid.Services.Implementation
         private readonly ILogger<InternalUserService> _logger;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private TokenHelper _tokenHelper;
 
-        public InternalUserService(ILogger<InternalUserService> logger, IUnitOfWork unitOfWork, IMapper mapper)
+        public InternalUserService(ILogger<InternalUserService> logger, IUnitOfWork unitOfWork, IMapper mapper, TokenHelper tokenHelper)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _tokenHelper = tokenHelper;
+        }
+
+        public string Login(InternalUserLoginRequest internalUserLoginRequest)
+        {
+            InternalUserResponse internalUser = this.GetInternalUserInformation(internalUserLoginRequest);
+            if (internalUser == null)
+                throw new Exception("Unauthorized");
+
+            var tokenString = _tokenHelper.GenerateToken(internalUser);
+
+            return tokenString;
         }
 
         public InternalUserDto Get(string key)

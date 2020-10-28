@@ -57,8 +57,8 @@ namespace GestionCovid
                 options.AddPolicy("AllowAllOrigins",
                     builder => builder.AllowAnyOrigin()
                         .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials());
+                        .AllowAnyHeader());
+                        //.AllowCredentials());
             });
 
             services.AddSpaStaticFiles(c =>

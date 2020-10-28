@@ -1,0 +1,20 @@
+{
+    "menuItems": [
+        {
+            "routePath": "/approvedOrganization/pending-deliveries",
+            "description": "Entregas pendientes",
+            "disabled": false,
+            "show": false,
+            "icon": "playlist_play",
+            "subItems": []
+        },
+        {
+            "routePath": "/approvedOrganization/finished-deliveries",
+            "description": "Entregas finalizadas",
+            "disabled": false,
+            "show": false,
+            "icon": "playlist_add_check",
+            "subItems": []
+        }
+    ]
+}

@@ -10,6 +10,7 @@ namespace GestionCovid.Services
 {
     public interface IInternalUserService
     {
+        string Login(InternalUserLoginRequest internalUserLoginRequest);
         InternalUserResponse GetInternalUserInformation(InternalUserLoginRequest internalUserLoginRequest);
         IEnumerable<InternalUserDto> GetAll();
         InternalUserDto Get(string key);

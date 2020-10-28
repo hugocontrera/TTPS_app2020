@@ -13,6 +13,7 @@
     <ProjectReference Include="..\GestionCovid.Constants\GestionCovid.Constants.csproj" />
     <ProjectReference Include="..\GestionCovid.DTOs\GestionCovid.DTOs.csproj" />
     <ProjectReference Include="..\GestionCovid.Repositories\GestionCovid.Repositories.csproj" />
+    <ProjectReference Include="..\Infrastructure\GestionCovid.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

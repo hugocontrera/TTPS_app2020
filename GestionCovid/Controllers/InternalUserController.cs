@@ -34,11 +34,7 @@ namespace GestionCovid.Controllers
         {
             try
             {
-                InternalUserResponse internalUser = _internalUserService.GetInternalUserInformation(internalUserLoginRequest);
-                if (internalUser == null)
-                    return Unauthorized();
-
-                var tokenString = _tokenHelper.GenerateToken(internalUser);
+                var tokenString = _internalUserService.Login(internalUserLoginRequest);
 
                 return Ok(new
                 {
