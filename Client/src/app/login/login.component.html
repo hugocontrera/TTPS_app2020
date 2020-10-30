@@ -8,20 +8,20 @@
       <h3 class="text-secondary">Iniciar sesión</h3>
 
       
-      <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="login()">
 
         <div *ngIf="invalidLogin" class="alert alert-danger">{{errorMessage}}</div>
         <br />
         <div style="text-align:center">
           <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
-            <input matInput maxlength="100" type="username" id="username" name="username" required autofocus placeholder="Ingrese un email">
+            <input matInput maxlength="100" type="username"  formControlName="username" autofocus placeholder="Ingrese un email">
           </mat-form-field>
         </div>
         <div style="text-align:center">
           <mat-form-field appearance="outline">
             <mat-label>Contraseña</mat-label>
-            <input matInput maxlength="50" type="password" id="password" name="password" required autofocus placeholder="Ingrese una contraseña">
+            <input matInput maxlength="50" type="password" formControlName="password" autofocus placeholder="Ingrese una contraseña">
           </mat-form-field>
         </div>
 
@@ -30,7 +30,7 @@
           <button mat-raised-button type="submit" class="button">Ingresar</button>
         </div>
         <div style="text-align:center" >
-            <button mat-raised-button type="submit" class="mt-4" (click)="goToHome()">Salir</button>
+            <button mat-raised-button type="submit" class="mt-4" (click)="goToHome()" [disabled]="loginForm.invalid">Salir</button>
           </div>
 
 
