@@ -47,6 +47,7 @@ export function tokenGetter() {
      BrowserAnimationsModule,
      HttpClientModule,
      FormsModule,
+     ReactiveFormsModule,
      CommonComponentsModule,
      UiModule,
      CommonModule,
