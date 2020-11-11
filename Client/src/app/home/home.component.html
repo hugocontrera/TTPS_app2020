@@ -1,13 +1,21 @@
 <div class="bg-light full-height mt-4">
 	<mat-toolbar>
 		<mat-toolbar-row>
-			<h5 class="my-0 mr-md-auto text-white">Gestion Covid</h5>
+			<h5 class="my-0 mr-md-auto text-white" >Gestion Covid</h5>
 			<span class="example-spacer"></span>
 			<mat-divider [vertical]="true"></mat-divider>
-
+			<div class="my-4 mr-md-auto text-white">
+			<a class="dropdown-item" (click)="goToLogin()">Iniciar sesión</a>
+			</div>
+			
 		</mat-toolbar-row>
-
+		
 	</mat-toolbar>
+	<body>
+		<div class="container">
+			<img src="../../favicon.ico" alt="Gestion de pacientes Covid-19">
+		</div>
+	</body>
 
 	<div class="py-2 footer">
 		<div class="container">
