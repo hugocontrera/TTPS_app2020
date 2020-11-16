@@ -21,6 +21,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { PacienteComponent} from './paciente/paciente.component'
 import { getSpanishPaginatorIntl } from './common/spanish-paginator';
 
 // Angular material
@@ -31,6 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 
+
 export function tokenGetter() {
   return localStorage.getItem('jwt');
 }
@@ -40,8 +42,10 @@ export function tokenGetter() {
     AppComponent,
     LoginComponent,
     HomeComponent,
+    PacienteComponent,
   ],
   imports: [
+     FormsModule,
      AppRoutingModule,
      BrowserModule,
      BrowserAnimationsModule,
