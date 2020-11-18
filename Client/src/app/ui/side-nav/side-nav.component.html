@@ -23,8 +23,11 @@
     <ul class="collapse" [ngClass]="{show: item.show}">
       <ng-container *ngFor="let subItem of item.subItems">
         <li>
-          <p [ngClass]="{disabled: subItem.disabled}"><a [routerLink]="item.routePath "
-              routerLinkActive="active">{{ subItem.description }}</a></p>
+           <p [ngClass]="{disabled: subItem.disabled}">
+            <mat-icon>{{ subItem.icon }}</mat-icon>
+             <a [routerLink]="subItem.routePath " routerLinkActive="active">{{ subItem.description }}</a>
+           </p>
+                     
         </li>
       </ng-container>
     </ul>

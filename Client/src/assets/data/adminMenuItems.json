@@ -1,0 +1,81 @@
+{
+    "menuItems": [
+        {
+            "routePath": "/admin/medico",
+            "description": "Médico",
+            "disabled": false,
+            "show": false,
+            "icon":"menu",
+            "subItems": [
+                {
+                    "routePath": "/admin/medico",
+                    "description": "Médicos",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "list_alt",
+                    "subItems": []
+                },                        
+                {
+                    "routePath": "/admin/medico/nuevo",
+                    "description": "Nuevo Médico",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "person_add_alt",
+                    "subItems": []
+                }        
+            ]
+        },
+        {
+            "routePath": "/admin/paciente",
+            "description": "Paciente",
+            "disabled": false,
+            "show": false,
+            "icon": "menu",
+            "subItems": [
+                {
+                    "routePath": "/admin/paciente",
+                    "description": "Pacientes",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "list_alt",
+                    "subItems": []  
+                },
+                {
+                    "routePath": "/admin/paciente/nuevo",
+                    "description": "Nuevo Paciente",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "person_add_alt",
+                    "subItems": []
+                }
+
+            ]
+        },
+        {
+            "routePath": "/admin/configurador",
+            "description": "Configurador",
+            "disabled": false,
+            "show": false,
+            "icon":"menu",
+            "subItems": [
+                {
+                    "routePath": "/admin/configurador",
+                    "description": "Configuradores",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "list_alt",
+                    "subItems": []
+                },                        
+                {
+                    "routePath": "/admin/configurador/nuevo",
+                    "description": "Nuevo Médico",
+                    "disabled": false,
+                    "show": false,
+                    "icon": "person_add_alt",
+                    "subItems": []
+                }        
+            ]
+        }
+
+    ]
+}

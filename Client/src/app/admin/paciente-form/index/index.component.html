@@ -1,0 +1,21 @@
+<p>admin - paciente home works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-4">
+            <ul class="list-group">
+                <li 
+                *ngFor="let paciente of pacienteArray"
+                class="list-group-item list-group-item-action"
+                (click)= "openForEdit(paciente)"
+                [class.active]="paciente == selectedPaciente"
+                > 
+                <span class="badge badge-primary">{{ paciente.id}}</span>
+                {{ paciente. nombre }} - {{ paciente. apellido }} - {{ paciente. domicilio }} - {{ paciente. f_nacimiento }} - {{ paciente. contacto }} - {{ paciente. f_ini_sintomas }} - {{ paciente. antecedentes_personales }} - {{ paciente. obra_social }} - {{ paciente. mail }} - {{ paciente. f_diagnostico }} - {{ paciente. descripcion }}
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/filter';
+import { filter } from 'rxjs/operators';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 @Injectable()

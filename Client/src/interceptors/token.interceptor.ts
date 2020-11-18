@@ -3,7 +3,7 @@ import { SESSION_STORAGE, StorageService } from 'ngx-webstorage-service';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { tap } from 'rxjs/internal/operators';
+import { tap } from 'rxjs/operators';
 
 
 @Injectable()

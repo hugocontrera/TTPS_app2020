@@ -31,6 +31,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 export function tokenGetter() {
@@ -43,6 +44,7 @@ export function tokenGetter() {
     LoginComponent,
     HomeComponent,
     PacienteComponent,
+    NotFoundComponent,
   ],
   imports: [
      FormsModule,
