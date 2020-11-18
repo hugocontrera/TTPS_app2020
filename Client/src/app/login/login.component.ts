@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { SessionService } from '../../services/session.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { LoginService } from 'src/services/login.service';
@@ -16,26 +16,28 @@ export class LoginComponent implements OnInit {
   errorMessage: string;
   token: string;
   invalidLogin: boolean;
-  loginForm:FormGroup;
+  loginForm: FormGroup;
   constructor(private sessionService: SessionService, private router: Router, private fb: FormBuilder,
               private loginService: LoginService, private spinner: NgxSpinnerService, private alertService: AlertService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
     this.sessionService.currentToken.subscribe(token => this.token = token);
   }
-  get username (){
+
+  get username(): AbstractControl{
     return this.loginForm.get('username');
   }
-  get password (){
+
+  get password(): AbstractControl{
     return this.loginForm.get('password');
   }
 
-  login() {
+  public login(): void {
     this.spinner.show();
     this.loginService.login(this.username.value, this.password.value).subscribe(
       response => {
@@ -50,15 +52,15 @@ export class LoginComponent implements OnInit {
   }
 
 
-  saveTokenAndUser(response: LoginResponse) {
+  private saveTokenAndUser(response: LoginResponse): void {
     this.invalidLogin = false;
     this.sessionService.clearLocalStorage();
     this.sessionService.setToken(response.token);
-
-    this.router.navigate(['home']);
+    this.sessionService.setMode('guardia');
+    this.goToHome();
   }
 
-  goToHome() {
-    this.router.navigate(['home']);
+  public goToHome(): void {
+    this.router.navigate(['user/home']);
   }
 }
