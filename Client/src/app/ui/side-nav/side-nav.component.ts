@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ListItem } from './model/listItem';
-import employeeData from 'src/assets/data/employeeMenuItems.json';
+import guardiaData from 'src/assets/data/guardiaMenuItems.json';
 import organizationData from 'src/assets/data/organizationMenuItems.json';
 import { SessionService } from 'src/services/session.service';
 
@@ -17,7 +17,7 @@ export class SideNavComponent implements OnInit {
   constructor(private sessionService: SessionService) { }
 
   ngOnInit() {
-    this.listItems = this.sessionService.getMode() === 'employee' ? employeeData.menuItems : organizationData.menuItems;
+    this.listItems = this.sessionService.getMode() === 'guardia' ? guardiaData.menuItems : organizationData.menuItems;
   }
 
   showElemento(item: ListItem) {

@@ -11,15 +11,15 @@ export class SessionService {
 
   constructor(@Inject(SESSION_STORAGE) private storage: StorageService) { }
 
-  setMode(mode: string) {
+  public setMode(mode: string): void {
     this.storeOnLocalStorage(mode, 'MODE');
   }
 
-  getMode() {
+  public getMode(): string {
     return this.storage.get('MODE');
   }
 
-  setToken(newToken: string) {
+  public setToken(newToken: string): void {
     this.tokenBehaviorSubject.next(newToken);
     this.storeOnLocalStorage(newToken, 'jwt');
   }

@@ -1,0 +1,28 @@
+{
+    "menuItems": [
+        {
+            "routePath": "/user/home",
+            "description": "Inicio",
+            "disabled": false,
+            "show": false,
+            "icon":"playlist_add_check",
+            "subItems": []
+        },
+        {
+            "routePath": "/user/paciente",
+            "description": "Pacientes",
+            "disabled": false,
+            "show": false,
+            "icon":"create",
+            "subItems": []
+        },
+        {
+            "routePath": "/user/sinAcceso",
+            "description": "Sin Acceso",
+            "disabled": false,
+            "show": false,
+            "icon":"create",
+            "subItems": []
+        }
+    ]
+}

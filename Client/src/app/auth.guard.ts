@@ -7,14 +7,15 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  urlPath: string;
-  continue: boolean;
 
   constructor(@Inject(SESSION_STORAGE) private storage: StorageService, private alertService: AlertService, private router: Router,
               private modalService: ModalService) {
 
   }
+  urlPath: string;
+  continue: boolean;
 
+  private void 
   canActivate(route: ActivatedRouteSnapshot): boolean {
     this.continue = false;
     const token = this.storage.get('jwt');
@@ -36,17 +37,16 @@ export class AuthGuard implements CanActivate {
       return true;
     }
   }
-
-  saveCurrentUrl() {
+  saveCurrentUrl(): void {
     this.storage.set('currentUrl', this.urlPath);
   }
 
-  validatePermission(allow: string) {
+  validatePermission(allow: string): void {
     const mode = this.storage.get('MODE');
 
     if (allow !== mode) {
       this.alertService.error('Tu usuario no tiene los permisos suficientes para ingresar a este lugar');
-      this.router.navigate([this.router.url]);
+      this.router.navigate(['user/home']);
     }
   }
 }

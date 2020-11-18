@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import employeeData from 'src/assets/data/employeeMenuItems.json';
+import guardiaData from 'src/assets/data/guardiaMenuItems.json';
 import organizationData from 'src/assets/data/organizationMenuItems.json';
 import { ListItem } from '../side-nav/model/listItem';
 import { SessionService } from 'src/services/session.service';
@@ -17,7 +17,7 @@ export class SideNavIconsComponent implements OnInit {
   constructor(private sessionService: SessionService) { }
 
   ngOnInit() {
-    this.listItems = this.sessionService.getMode() === 'employee' ? employeeData.menuItems : organizationData.menuItems;
+    this.listItems = this.sessionService.getMode() === 'guardia' ? guardiaData.menuItems : organizationData.menuItems;
   }
 
   toggleClick() {

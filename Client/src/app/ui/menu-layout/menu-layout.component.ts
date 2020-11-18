@@ -27,7 +27,7 @@ export class MenuLayoutComponent implements OnInit {
 
   logOut(){
     this.sessionService.clearLocalStorage();
-    this.router.navigate(['home']);
+    this.router.navigate(['login']);
   }
 
 }
