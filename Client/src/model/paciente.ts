@@ -1,6 +1,6 @@
 export class Paciente{
     id: number = 0;
-    dni: number;
+    dni: string;
     nombre: string;
     apellido: string;
     domicilio: string;
