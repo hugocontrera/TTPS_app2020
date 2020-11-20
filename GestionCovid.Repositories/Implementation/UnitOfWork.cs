@@ -8,14 +8,15 @@ namespace GestionCovid.Repositories.Implementation
     {
 
         public IInternalUserRepository InternalUserRepository { get; }
-
+        public IPacienteRepository PacienteRepository { get; }
 
 
         private readonly DB_GestionCovidContext _dbContext;
 
-        public UnitOfWork (IInternalUserRepository internalUserRepository, DB_GestionCovidContext dbContext)
+        public UnitOfWork (IInternalUserRepository internalUserRepository, IPacienteRepository pacienteRepository, DB_GestionCovidContext dbContext)
         {
             InternalUserRepository = internalUserRepository;
+            PacienteRepository = pacienteRepository;
             _dbContext = dbContext;
         }
 

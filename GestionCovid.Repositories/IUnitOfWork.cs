@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace GestionCovid.Repositories
 {
@@ -9,6 +6,8 @@ namespace GestionCovid.Repositories
     {
 
         IInternalUserRepository InternalUserRepository { get; }
+
+        IPacienteRepository PacienteRepository { get; }
 
         void GenerateBaseData();
 

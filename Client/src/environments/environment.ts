@@ -7,6 +7,7 @@ export const environment = {
   userServer: 'https://localhost:44350',
 
   loginUrl: '/api/InternalUser/login',
+  getPacientesUrl: '/api/pacientes/getPacientes', //aqui ponemos la url de pacientes que conecta con la api
 
   withoutAuthorizationUrls: ['login', 'home']
 };

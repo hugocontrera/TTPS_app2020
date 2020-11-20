@@ -20,5 +20,6 @@ namespace GestionCovid.Context
         }
 
         public virtual DbSet<InternalUser> InternalUsers { get; set; }
+        public virtual DbSet<Paciente> Pacientes { get; set; }
     }
 }

@@ -40,7 +40,7 @@
                     </div>
                     <label for="titulo"> Fecha de Nacimiento </label>
                     <div class="form-group">
-                        <input type="text" [(ngModel)]="selectedPaciente.f_nacimiento" placeholder="Ingrese su fecha de nacimiento" class="form-control">
+                        <input type="text" [(ngModel)]="selectedPaciente.fechaNacimiento" placeholder="Ingrese su fecha de nacimiento" class="form-control">
                     </div>
                     <label for="titulo"> Contacto </label>
                     <div class="form-group">
@@ -48,15 +48,15 @@
                     </div>
                     <label for="titulo"> Fecha de Inicio de Sintomas </label>
                     <div class="form-group">
-                        <input type="text" [(ngModel)]="selectedPaciente.f_ini_sintomas" placeholder="Ingrese una fecha de inicio de sintomas" class="form-control">
+                        <input type="text" [(ngModel)]="selectedPaciente.fechaInicioSintomas" placeholder="Ingrese una fecha de inicio de sintomas" class="form-control">
                     </div>
                     <label for="titulo"> Antecedentes Personales </label>
                     <div class="form-group">
-                        <input type="text" [(ngModel)]="selectedPaciente.antecedentes_personales" placeholder="Ingrese antecedentes personales" class="form-control">
+                        <input type="text" [(ngModel)]="selectedPaciente.antecedentesPersonales" placeholder="Ingrese antecedentes personales" class="form-control">
                     </div>
                     <label for="titulo"> Obra Social </label>
                     <div class="form-group">
-                        <input type="text" [(ngModel)]="selectedPaciente.obra_social" placeholder="Ingrese una obra social" class="form-control">
+                        <input type="text" [(ngModel)]="selectedPaciente.obraSocial" placeholder="Ingrese una obra social" class="form-control">
                     </div>
                     <label for="titulo"> Mail </label>
                     <div class="form-group">
@@ -64,7 +64,7 @@
                     </div>
                     <label for="titulo"> Fecha de Diagnostico </label>
                     <div class="form-group">
-                        <input type="text" [(ngModel)]="selectedPaciente.f_diagnostico" placeholder="Ingrese una fecha de diagnostico" class="form-control">
+                        <input type="text" [(ngModel)]="selectedPaciente.fechaDiagnostico" placeholder="Ingrese una fecha de diagnostico" class="form-control">
                     </div>
                     <label for="titulo"> Descripcion </label>
                     <div class="form-group">
@@ -74,7 +74,6 @@
                         Aceptar
                     </button>
                     <button 
-                    *ngIf="selectedPaciente.id !== 0"
                     class="btn btn-danger"
                     (click)="delete()"
                     >

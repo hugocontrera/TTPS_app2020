@@ -76,6 +76,9 @@ namespace GestionCovid
             services.AddTransient<IInternalUserRepository, InternalUserRepository>();
             services.AddTransient<IInternalUserService, InternalUserService>();
 
+            services.AddTransient<IPacienteRepository, PacienteRepository>();
+            services.AddTransient<IPacienteService, PacienteService>();
+
             services.AddTransient<TokenHelper, TokenHelper>();
             services.AddTransient<EmailSender>();
 

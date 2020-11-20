@@ -1,15 +1,15 @@
-export class Paciente{
-    id: number = 0;
-    dni: string;
+export class Paciente {
+    key: string;
+    dni: number;
     nombre: string;
     apellido: string;
     domicilio: string;
-    f_nacimiento: string;
+    fechaNacimiento: Date;
     contacto: string;
-    f_ini_sintomas: string;
-    antecedentes_personales: string;
-    obra_social: string;
+    fechaInicioSintomas: Date;
+    antecedentesPersonales: string;
+    obraSocial: string;
     mail: string;
-    f_diagnostico: string;
+    fechaDiagnostico: Date;
     descripcion: string;
 }

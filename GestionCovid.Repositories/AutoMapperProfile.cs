@@ -12,6 +12,8 @@ namespace GestionCovid.Repositories
             CreateMap<InternalUser, InternalUserDto>(MemberList.None);
 
             CreateMap<InternalUser, InternalUserResponse>(MemberList.None);
+
+            CreateMap<Paciente, PacienteDto>(MemberList.None);
         }
 
     }
